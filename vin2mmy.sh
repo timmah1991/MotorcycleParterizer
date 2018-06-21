@@ -36,11 +36,16 @@ for i in `curl -s $TLPF | pup 'ul[class="partsubselect"]' | grep href | sed 's/^
                             echo "no sales found for part number" $n
                         else
                             echo "The following sale prices were found for" $n
+                            echo "use the following URL to access the results list https://www.ebay.com/sch/i.html?_from=R40&_nkw="$n"&_sacat=0&LH_Complete=1&LH_Sold=1&_sop=16" 
+                            echo "use the following link to see sold listings for" $n " https://www.ebay.com/sch/i.html?_from=R40&_nkw="$n"&_sacat=0&LH_Complete=1&LH_Sold=1&_sop=16" >> soldindex.txt
                             cat $n.html | pup 'span[class="POSITIVE"]' | grep "^\s"
                         fi
                         rm $n.html
                     done
         done
+
+cat soldindex.txt
+rm soldindex.txt
 
 #Take the top level parts fiche and turn it into a list of subfiche links
 #curl $TLPF | pup 'ul[class="partsubselect"]' | grep href | sed 's/^[^\/]*/https\:\/\/www.partsfish.com/' | sed 's/\">//'
