@@ -1,6 +1,9 @@
 # MotorcycleParterizer
+
 Script to take the VIN from a motorcycle and turn it into a potential partout earning list.
+
 must run "brew install pup" before using
+
 OSX only for now, need to change up regex usage if using linux
 
 
