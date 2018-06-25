@@ -24,6 +24,7 @@ echo "Inserting DB Record for VIN:"$VIN "Year:" $YEAR "Make:" $MAKE "Model:" $MO
 
 #TODO: Turn MMY into top level parts fiche list EG: https://www.partsfish.com/oemparts/l/kaw/57f51f0d87a8660d6c7c9797/2017-z125-pro-br125jhf-parts
 TLPF='https://www.partsfish.com/oemparts/l/kaw/57f51f0d87a8660d6c7c9797/2017-z125-pro-br125jhf-parts' #setting TLPF statically for now
+#TLFP=`https://www.partsfish.com/oemparts/l/yam/500418c7f8700209bc78516a/1975-dt250b-parts` #setting to skylers bike
 
 
 
